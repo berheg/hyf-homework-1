@@ -1,0 +1,141 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Rokkitt', serif;
+  font-size: 16px;
+}
+
+aside {
+  position: fixed;
+  width: 45%;
+}
+
+main {
+  position: relative;
+  width: 55%;
+  float: right;
+}
+
+.photo {
+  position: static;
+  top: 5%;
+  float: left;
+  width: 100%;
+  z-index:1;
+}
+
+h1 {
+  color: white;
+  position: absolute;
+  margin-top: 8%;
+  left: 5%;
+  font-size: 36px;
+  z-index:2;
+}
+
+h3 {
+  color: white;
+  position: absolute;
+  float:left;
+  margin-top: 15%;
+  left:8%;
+  font-size: 20px;
+  z-index:3;
+}
+
+.navigation li{
+  list-style: none;
+  display: inline-block;
+  margin: 10px 2% 10px 10px;
+  padding: 3px;
+}
+
+.navigation li:hover {
+  border-bottom: 2px solid black;
+}
+
+.navigation a{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link a{
+  text-decoration: none;
+  color: #221d73;
+}
+
+.link:hover {
+  border-bottom: 0.5px dotted #221d73;
+}
+
+address, section, table, h1, h2, h3, h4{
+  padding: 15px 10px;
+}
+
+p {
+  padding: 5px 0px;
+}
+
+.address-icon {
+  width: 20px;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+.social-icon {
+  height: 20px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.profile-summary, .experience, .interests, nav{
+  background-color: #e2e2e1;
+}
+
+.profile-summary p{
+  margin-left: 10px;
+}
+
+td {
+  padding: 10px 0px;
+  vertical-align: top;
+}
+
+.dates {
+  text-align: left;
+  width: 20%;
+}
+
+table{
+  width: 100%;
+}
+
+.highlight table{
+  margin-left: 10px;
+}
+
+.highlight td {
+  width: 35%;
+}
+
+.interests img {
+  width: 50px;
+  position: relative;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.interests div {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+@media screen and (max-width: 700px) {
+  aside, main {
+    width: 100%;
+    position: relative;
+  }
+}
+
