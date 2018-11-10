@@ -5,7 +5,7 @@
   font-size: 16px;
 }
 
-aside {
+header {
   position: fixed;
   width: 45%;
 }
@@ -33,13 +33,14 @@ h1 {
   z-index:2;
 }
 
-h3 {
+h1 .subheadline {
+  display: block;
   color: white;
   position: absolute;
   float:left;
   margin-top: 15%;
   left:8%;
-  font-size: 20px;
+  font-size: 25px;
   z-index:3;
 }
 
@@ -132,8 +133,8 @@ table{
   margin-bottom: 3%;
 }
 
-@media screen and (max-width: 1440px) {
-  aside, main {
+@media screen and (max-width: 1500px) {
+  header, main {
     width: 100%;
     position: relative;
   }
