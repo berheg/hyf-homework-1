@@ -1,0 +1,195 @@
+* {
+	padding: 0px;
+	margin: 1px;
+	font-size: 16px;
+	font-weight: normal;
+	/*max-width: 1160px;*/
+	font-family: 'Noto Sans SC', sans-serif;
+	
+}
+
+header, nav, main {
+	padding: 40px 10%;
+}
+
+header {
+	background-color: rgba(209, 207, 207, 0.1);
+	border-bottom: 1px solid rgba(209, 207, 207, 0.3);
+}
+
+
+h1 {
+	font-weight: bold;
+	font-size: 42px;
+
+}
+
+span.header-part {
+	font-size: 20px;
+	color: #A09F9F;
+
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+nav li {
+	margin-right: 5%;
+	list-style: none;
+	display: inline-block;
+	float: left;
+
+}
+
+nav li :hover {
+	color: #A09F9F;
+}
+
+.main-image img{
+	width: 100%;
+}
+
+
+.left h2 {
+	font-size: 1.1em;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+
+.right h2 {
+	font-size: 1.6em;
+	font-weight: bold;
+	margin-bottom: 0.8em;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+main div{
+	box-sizing: border-box;
+}
+
+.left {
+	width: 35%;
+	float: left;
+	margin-right: 4%;
+	clear: left;
+}
+
+.right {
+	width: 60%;
+	float: left;
+}
+
+.top.block {
+	margin-bottom: 30px;
+}
+
+.logo.set {
+	width:100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+}
+
+.logo img {
+	order: -1;
+	max-width: 130px;
+	width: calc(100% - 10px);
+	margin: 5px;
+	float: left;
+	
+}
+
+footer {
+	background-color: #5639AB;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	color: white;
+	padding: 40px 10%;
+}
+
+.footer-column li:hover {
+	text-indent: 10px;
+}
+
+iframe {
+	width: 200px;
+	height: 200px;
+}
+
+figcaption {
+	font-weight: bold;
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+
+.footer-column ul {
+	list-style: none;
+}
+
+.footer-column ul li a{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}	
+
+.footer-column ul li {
+	padding-bottom: 15px;
+}
+
+main:before,
+main:after {
+  content: "";
+  display: table;
+} 
+main:after {
+  clear: both;
+}
+main {
+  zoom: 1; 
+}
+
+@media screen and (max-width: 700px) {
+	* {
+		width: 100%;
+		clear: both;	
+	}
+
+	header, nav, main, footer {
+		padding: 20px 3%;
+	}
+
+	.right.top {
+		order: 1;
+	}
+
+	.logo img {
+	order: -1;
+	width: calc(100% - 10px);
+	margin: 5px;
+	float: left;
+	}
+
+	footer {
+		grid-template-columns: 1fr;
+	}
+
+	footer div {
+		margin: 20px 5%;
+	}
+
+	.block {
+		width: 100%;
+	}
+
+}
+
