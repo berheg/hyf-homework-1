@@ -3,9 +3,8 @@
 	margin: 1px;
 	font-size: 16px;
 	font-weight: normal;
-	/*max-width: 1160px;*/
 	font-family: 'Noto Sans SC', sans-serif;
-	
+	box-sizing: border-box;
 }
 
 header, nav, main {
@@ -50,6 +49,8 @@ nav li :hover {
 
 .main-image img{
 	width: 100%;
+	margin: 0px;
+	padding: 0px;
 }
 
 
@@ -164,12 +165,13 @@ main {
 		clear: both;	
 	}
 
-	header, nav, main, footer {
-		padding: 20px 3%;
+	.main-image img{
+	width: 100%;
+
 	}
 
-	.right.top {
-		order: 1;
+	header, nav, main, footer {
+		padding: 20px 3%;
 	}
 
 	.logo img {
