@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Your custom tailor</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="images/logo.gif" alt="Your custom tailor logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Step 1</a></li>
+                    <li><a href="page2.html">Step 2</a></li>
+                    <li><a href="page3.html">Step 3</a></li>
+                    <li><a href="page4.html">Step 4</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="introduction">
+                <h1>Sign up to yourcustomtailor.com</h1>
+            </section>
+
+            <section class="step">
+                <h2>Step 2/4 - how can we reach you?</h2>
+                <form>
+                    <label for="questionnaire-progress">Progress</label><br>
+                    <progress max="4" value="1">1/4</progress>
+
+                    <p>We will probably need to stay in touch somehow. Let us know how we can reach you?</p>
+
+                    <div class="contactInfo group">
+                        <div class="column">
+                            <div>
+                                <label for="mail">Email<abbr title="Required">*</abbr></label>
+                                <input type="email" id="mail" name="user_mail" pattern="^([^\x00-\x20\x22\x28\x29\x2c\
+                                x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*
+                                \x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\
+                                x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\
+                                x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e
+                                ([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d
+                                \x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$" required>
+                            </div>
+                            <div>
+                                <label for="phone">Phone</label>
+                                <input type="number" id="phone" name="user_phone" minlength="8" maxlength="10" pattern="^[+]*
+                                [(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$" placeholder="12345678">
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div>
+                                <label for="pswd">Password<abbr title="Required">*</abbr></label>
+                                <input type="password" name="user_pass" id="pswd" minlength="10" pattern="^(?=.*\d)(?=.*[a-z])
+                                (?=.*[A-Z])(?!.*\s).*$" title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number."
+                                required>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="re-pswd">Re-enter Password<abbr title="Required">*</abbr></label>
+                                <input type="password" name="user_pass" id="re-pswd" required>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="sign-up">
+                        <p> 
+                            I want to sign up for the newsletter
+                        </p>
+                        <input type="radio" name="news" id="weekly" value="weekly-news">
+                        <label for="weekly">Weekly news</label>
+                        <input type="radio" name="news" id="monthly" value="monthly-news">
+                        <label for="monthly">Monthly news</label>
+                        <input type="radio" name="news" id="noNews" value="no-news">
+                        <label for="noNews">Don't send me news</label>
+                    </div>
+                </form>
+            </section>
+            <a href="page3.html"><button type="button" name="next-step">Next step</button></a>
+        </main>
+    </body>
+</html>

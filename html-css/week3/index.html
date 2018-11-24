@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Your custom tailor</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="images/logo.gif" alt="Your custom tailor logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Step 1</a></li>
+                    <li><a href="page2.html">Step 2</a></li>
+                    <li><a href="page3.html">Step 3</a></li>
+                    <li><a href="page4.html">Step 4</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="introduction">
+                <h1>Sign up to yourcustomtailor.com</h1>
+                <p>
+                    We can't wait to help you improve your style and gain the attention from people around you!
+                </p>
+                <p>
+                    Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy 
+                    picking the best offers that match your preferences and style. Every week we will send you
+                    a hand-picked selection - we just need to know a few details about your first...
+                </p>
+            </section>
+
+            <section class="step">
+                <h2>Step 1/4 - tell us who you are?</h2>
+                <form>
+                    <label for="questionnaire-progress">Progress</label><br>
+                    <progress max="4" value="0.5">0.5/4</progress>
+
+                    <p>Nice to meet you. Let's spend a minute to get to know each other? Please enter the following:</p>
+
+                    <div class="mustInfo group">
+                        <div class="column">
+                            <div>
+                                <label for="first-name">First name<abbr title="Required">*</abbr></label>
+                                <input type="text" id="first-name" name="first-name" pattern="[A-Z]?[a-z]" minlength="2" maxlength="20" required>
+                            </div>
+                            <div>
+                                <label for="last-name">Last name<abbr title="Required">*</abbr></label>
+                                <input type="text" id="last-name" name="last-name" pattern="[A-Z]?[a-z]" minlength="2" maxlength="20" required>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div>
+                                <label for="country">Country<abbr title="Required">*</abbr></label>
+                                <input type="text" name="country" id="country" list="country-suggestion" required>
+                                <datalist id="country-suggestion" name="country" required>
+                                    <option>Denmark</option>
+                                    <option>Sweden</option>
+                                    <option>Norway</option>
+                                </datalist>
+                            </div>  
+                            <div></div>
+                        </div>
+                        <div class="column">
+                            <div>
+                                <label for="street-address">Street address<abbr title="Required">*</abbr></label>
+                                <input type="text" id="street-address" name="street-address" pattern="[A-Z]?[a-z]" minlength="2" maxlength="25" required>
+                            </div>
+                            <div>
+                                <label for="post-code">Post code<abbr title="Required">*</abbr></label>
+                                <input type="text" id="post-code" minlength="4" maxlength="4" pattern="^(0|[1-9][0-9]*)$" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profileDescription">
+                        <label for="user_description">
+                            <p> 
+                                <span>Profile description</span> 
+                                <br>
+                                <em>Please provide a short description of yourself to be displayed on our social community pages.</em>
+                            </p>
+                        </label>
+                        <textarea id="user_description" type="text" maxlength="500"></textarea>
+                    </div>
+                    <div>
+                        <p>Use the same address for billing and shipping? Uncheck below to fill out a separate shipping address</p>
+                        <label for="shipping-address">Shipping address</label>
+                        <input type="checkbox" id="shipping-address" name="shipping-address" checked required>
+            
+                        <div class="shippingInfo group">
+                            <div class="column">
+                                <div>
+                                    <label for="first-name-sh">First name<abbr title="Required">*</abbr></label>
+                                    <input type="text" id="first-name-sh" name="first-name" pattern="[A-Z]?[a-z]" minlength="2" maxlength="20" required>
+                                </div>
+                                <div>
+                                    <label for="last-name-sh">Last name<abbr title="Required">*</abbr></label>
+                                    <input type="text" id="last-name-sh" name="last-name" pattern="[A-Z]?[a-z]" minlength="2" maxlength="20" required>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div>
+                                    <label for="country-sh">Country<abbr title="Required">*</abbr></label>
+                                    <input type="text" name="country" id="country-sh" list="country-suggestion">
+                                    <datalist id="country-suggestion" name="country" required>
+                                        <option>Denmark</option>
+                                        <option>Sweden</option>
+                                        <option>Norway</option>
+                                    </datalist>
+                                </div>
+                                <div></div>
+                            </div>
+                            <div class="column">
+                                <div>
+                                    <label for="street-address-sh">Street address<abbr title="Required">*</abbr></label>
+                                    <input type="text" id="street-address-sh" name="street-address" pattern="[A-Z]?[a-z]" minlength="2" maxlength="25" required>
+                                </div>
+                                <div>
+                                    <label for="post-code-sh">Post code<abbr title="Required">*</abbr></label>
+                                    <input type="number" id="post-code-sh" minlength="4" maxlength="8" required> 
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </form>
+            </section>
+            <a href="page2.html"><button type="button" name="next-step">Next step</button></a>
+        </main>
+    </body>
+</html>

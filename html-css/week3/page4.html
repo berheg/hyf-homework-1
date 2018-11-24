@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Your custom tailor</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="images/logo.gif" alt="Your custom tailor logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Step 1</a></li>
+                    <li><a href="page2.html">Step 2</a></li>
+                    <li><a href="page3.html">Step 3</a></li>
+                    <li><a href="page4.html">Step 4</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="introduction">
+                <h1>Sign up to yourcustomtailor.com</h1>
+            </section>
+
+            <section class="step">
+                <h2>Step 4/4 - Payment</h2>
+                <form>
+                    <label for="questionnaire-progress">Progress</label><br>
+                    <progress max="4" value="3.5">3.5/4</progress>
+
+                    <p>Please fill out your payment data</p>
+
+                    <div class="payInfo group">
+                        <div class="column">
+                            <div>
+                                <label for="card_name">Name on the card</label>
+                                <input type="text" id="card_name" name="card-name" pattern="[A-Z]?[a-z]" minlength="2" maxlength="20" required>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="column">
+                            <div>
+                                <label for="card-type">Card type</label>
+                                <select name="card-type" id="card-type" required>
+                                    <option>VISA</option>
+                                    <option>MasterCard</option>
+                                    <option>American Express</option>
+                                    <option>DK</option>
+                                </select>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="column">
+                            <div>
+                                <label for="card-number">Credit card number</label>
+                                <input type="number" id="card-number" name="card-number" pattern="[+]?[0-9]" minlength="16" maxlength="16" required>
+                            </div>
+                            <div>
+                                <label for="first-name">First name</label>
+                                <input type="text" id="first-name" name="first-name">
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div>
+                                <label for="exp-month">Expiry month</label>
+                                <input type="number" id="exp-month" name="exp-month" pattern="[1-9]|[1][0-2]" required>
+                                <label for="exp-year">Expiry year</label>
+                                <input type="year" id="exp-year" name="exp-year" required>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="column">
+                            <div>
+                                <label for="cvv">CVV</label>
+                                <input type="number" id="cvv" name="cvv" minlength="3" maxlength="3" required>
+                            </div>
+                            <div></div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <a href="page5.html"><button type="submit" name="submit">SUBMIT</button></a>
+        </main>
+    </body>
+</html>

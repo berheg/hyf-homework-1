@@ -1,0 +1,228 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+    max-width: 1160px;
+    margin: 20px auto;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    display: flex;
+    width: 10%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-grow: 10;
+}
+
+nav ul li {
+    display: inline-block;
+    padding-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    border-bottom: 2px solid #E3571A;
+    color: #E3571A;
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 20px 0px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    padding: 10px 0px;
+}
+
+p {
+    margin: 10px 50px 10px 0px;
+}
+
+progress {
+    width: 100%;
+    height: 3rem;
+    
+}
+
+label, option {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+    margin: auto 5px;
+}
+
+li {
+    list-style: none;
+}
+
+.mustInfo, .profileDescription, .shippingInfo, .contactInfo, 
+.sign-up, .itemsKind, .images, .payInfo, .finish  {
+    padding: 20px;
+}
+
+input, select, datalist {
+    width: 25rem;
+    height: 3rem;
+}
+
+input[name=exp-month], input[name=exp-year] {
+    width: 12rem;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin-left: 5px;
+    height: 2rem;
+    width: 2rem;
+}
+
+div {
+    padding: 10px 0px;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+}
+
+.column {
+    display: flex;
+    flex-direction: row; 
+}
+
+.column div {
+    display: flex;
+    flex-grow: 1;  
+}
+
+.itemsKind {
+    width: 50%;
+}
+
+.profileDescription {
+    display: flex;
+    flex-direction: row;
+}
+
+p em {
+    font-weight: normal;
+    font-size: 0.8rem;
+}
+
+textarea {
+    width: 80%;
+    height: 9rem;
+}
+
+input[name=shipping-address]:checked ~ div {
+    height: 0px;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+button {
+    width: 25%;
+    height: 6rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+section + a {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+}
+
+section img {
+    width: 500px;
+    position: relative;
+    float: center;
+}
+
+.last-page ul li {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.last-page ul li:hover {
+    border: 1px solid #E3571A;
+}
+
+.finish {
+    text-align: center;
+}
+
+.orange {
+    color: #E3571A;
+}
+
+figure {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+  
+.container label div {
+    border: 2px solid #64635E;
+    width: 100%;
+    height: 50%;
+    margin-bottom: 10px;
+}
+  
+.container {
+    display: flex;
+    width: calc(25% - 20px);
+    height: 250px;
+    margin: 10px;
+}
+  
+.container label {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px auto;
+}
+
+figcaption span {
+    margin-right: 10px;
+}
+   
+figcaption {
+    display: flex;
+    align-self: flex-end;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        width: 100vm;
+        margin: 2%;
+    }
+
+    .group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .column {
+        display: flex;
+        flex-direction: column; 
+    }
+}
