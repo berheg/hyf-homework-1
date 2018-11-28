@@ -23,7 +23,7 @@ h1 {
 
 }
 
-span.header-part {
+h2.header-part {
 	font-size: 20px;
 	color: #A09F9F;
 
@@ -159,7 +159,7 @@ main {
   zoom: 1; 
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 600px) {
 	* {
 		width: 100%;
 		clear: both;	
@@ -193,5 +193,21 @@ main {
 		width: 100%;
 	}
 
+	nav {
+		font-size: 25px;
+		margin-bottom: 5px;
+	}
+
+	iframe {
+		width: 100%;
+		height: auto;
+	}
+
+	.logo.set {
+		width:100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+	}
 }
 
