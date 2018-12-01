@@ -12,23 +12,25 @@ body {
 header {
     display: flex;
     flex-direction: row;
+    flex-grow:1;
 }
 
 .logo {
     display: flex;
     width: 10%;
+    flex-grow: 1;
 }
 
 nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    flex-grow: 10;
+    flex-grow: 3;
 }
 
 nav ul li {
     display: inline-block;
-    padding-left: 30px;
+    padding-left: 1rem;
 }
 
 nav ul li a {
@@ -58,8 +60,10 @@ p {
 
 progress {
     width: 100%;
-    height: 3rem;
-    
+    height: 2rem;
+    background: #555;
+    border-radius: 50px;
+    animation: moveRight 2s;
 }
 
 label, option {
@@ -80,11 +84,13 @@ li {
 
 input, select, datalist {
     width: 25rem;
-    height: 3rem;
+    height: 2rem;
+    border-radius: 50px;
 }
 
 input[name=exp-month], input[name=exp-year] {
     width: 12rem;
+    border-radius: 50px;
 }
 
 input[type=checkbox], input[type=radio] {
@@ -140,9 +146,17 @@ input[name=shipping-address]:checked ~ div {
 
 button {
     width: 25%;
-    height: 6rem;
+    height: 3rem;
     font-weight: bold;
     font-size: 1.5rem;
+    background-color: #E3571A;
+    opacity: 0.3;
+    border: none;
+    border-radius: 50px;
+}
+
+button:hover {
+    opacity: 1;
 }
 
 section + a {
@@ -179,18 +193,11 @@ figure {
     flex-direction: row;
     flex-wrap: wrap;
 }
-  
-.container label div {
-    border: 2px solid #64635E;
-    width: 100%;
-    height: 50%;
-    margin-bottom: 10px;
-}
-  
+
 .container {
     display: flex;
     width: calc(25% - 20px);
-    height: 250px;
+    height: auto;
     margin: 10px;
 }
   
@@ -198,7 +205,20 @@ figure {
     display:flex;
     justify-content: center;
     flex-direction: column;
+    width: 90%;
     margin: 0px auto;
+}
+
+.container label div {
+    border: 2px solid #64635E;
+    width: 100%;
+    height: 70%;
+    margin-bottom: 10px;
+}
+  
+.container label div img {
+    height: 100%;
+    max-width: 100%;
 }
 
 figcaption span {
@@ -213,7 +233,9 @@ figcaption {
 @media screen and (max-width: 700px) {
     body {
         width: 100vm;
-        margin: 2%;
+        margin: 5px 10px;
+        display: flex;
+        flex-direction: column;
     }
 
     .group {
@@ -225,4 +247,40 @@ figcaption {
         display: flex;
         flex-direction: column; 
     }
+
+    .profileDescription {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    p {
+        margin: 10px 0px;
+    }
+
+    textarea {
+        width: 100%;
+        height: 9rem;
+    }
+
+    label, option {
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: right;
+    }
+    
+    .mustInfo, .profileDescription, .shippingInfo, .contactInfo, 
+    .sign-up, .itemsKind, .images, .payInfo, .finish  {
+        padding: 20px;
+    }
+    
+    input, select, datalist {
+        width: 15rem;
+        height: 3rem;
+    }
+    
+    input[name=exp-month], input[name=exp-year] {
+        width: 6rem;
+    }
+    
+         
 }
