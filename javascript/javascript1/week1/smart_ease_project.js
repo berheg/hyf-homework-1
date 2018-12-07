@@ -17,10 +17,11 @@ console.log("*** A DOG AGE CALCULATOR ***");
 let dogYearOfBirth = 2008;
 let dogYearFuture = 2045;
 let dogYear = dogYearFuture - dogYearOfBirth;
+let choice = true;
 
 let shouldShowResultInDogYears = 7 * dogYear;
 
-if (true) {
+if (choice) {
     console.log( "Your dog will be " + shouldShowResultInDogYears + " dog years old in " + dogYearFuture);
 } else {
     console.log("Your dog will be " + dogYear + " human years old in " + dogYearFuture);
