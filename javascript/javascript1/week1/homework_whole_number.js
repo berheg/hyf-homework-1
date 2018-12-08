@@ -1,3 +1,4 @@
-let number = Math.round(7.25);
+let number = 7.25;
+let roundedNumber = Math.round(number);
 
-console.log("Rounded number of 7.25 is " + number);
+console.log("Rounded number of " + number + " is " + roundedNumber);
