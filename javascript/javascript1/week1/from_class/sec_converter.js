@@ -1,7 +1,11 @@
-let hour = 1;
-let min = 15;
-let sec = 2;
+//a function, that converts X hours, Y minutes and Z seconds into seconds
 
-let value = (hour*60 + min)*60 + sec;
+function timeIntoSeconds (hours, minutes, seconds) {
+    let timeInSecs = (hours * 60 + minutes)*60 + seconds;
+    return timeInSecs;
+}
 
-console.log("Seconds : " + value);
+let time = timeIntoSeconds (2, 15, 30);
+console.log ('Result will be ' + time + ' in seconds');
+
+

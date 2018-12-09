@@ -1,9 +1,10 @@
-let hour = 1;
-let min = 15;
+// a function, that converts X hours and Y minutes into minutes
 
-hour = 3;
+function hoursIntoMinutes ( hours, minutes){
+    let minCalculation = hours * 60 + minutes;
+    return minCalculation;
+}
 
-let minutes = hour*60 + min;
-
-console.log("Minutes : " + minutes);
+let minCalculation = hoursIntoMinutes (1, 15);
+console.log (minCalculation);
 
