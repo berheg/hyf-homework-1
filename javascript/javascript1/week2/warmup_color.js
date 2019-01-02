@@ -14,5 +14,5 @@ console.log(colorObjects); // 4. logging out colorObjects
 
 //7.For every object in the array log out the color of the object. 
 for (let i=0; i < colorObjects.length; i++) {
-   console.log(colorObjects[i]);
+   console.log(colorObjects[i].color);
 }

@@ -8,5 +8,5 @@ console.log (emptyObject());
 
 // 2. creating new variable timeOblect and assigning it to result of previous step
 
-let timeObject  = emptyObject; 
-console.log (timeObject());
+let timeObject  = emptyObject(); 
+console.log (timeObject);

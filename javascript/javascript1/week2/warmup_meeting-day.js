@@ -12,12 +12,14 @@ let week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", 
 function meeting (dayFrom, inDays) {
     for (let i=0; i < week.length; i++ ){
         if (dayFrom === week[i]) {
-            let a = i + 1 + inDays;
-            let meetDay = week[a % 7 - 1];
+            //let a = i + 1 + inDays;
+            //let meetDay = week[a % 7 - 1];
+            let meetDayId = (i + 1 + inDays) % 7 - 1;
+            let meetDay = week[meetDayId];
             console.log ("Today is: " + dayFrom);
             console.log ("How many days to meet: " + inDays);
             console.log ("We are meeting on: " + meetDay);
-        } else continue;
+        };
     }
 }
 meeting ("Sunday", 9);

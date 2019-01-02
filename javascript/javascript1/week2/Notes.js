@@ -78,11 +78,14 @@ function sortNotes () {
 
 // Step-3 - rule of showing sorted notes
 function displayNotes () {
-    console.log(notes[0].noteId + " - " + notes[0].priority + " - " + notes[0].note);
-    console.log(notes[1].noteId + " - " + notes[1].priority + " - " + notes[1].note);
-    console.log(notes[2].noteId + " - " + notes[2].priority + " - " + notes[2].note);
-    console.log(notes[3].noteId + " - " + notes[3].priority + " - " + notes[3].note);
-    console.log(notes[4].noteId + " - " + notes[4].priority + " - " + notes[4].note);
+    //console.log(notes[0].noteId + " - " + notes[0].priority + " - " + notes[0].note);
+    //console.log(notes[1].noteId + " - " + notes[1].priority + " - " + notes[1].note);
+    //console.log(notes[2].noteId + " - " + notes[2].priority + " - " + notes[2].note);
+    //console.log(notes[3].noteId + " - " + notes[3].priority + " - " + notes[3].note);
+    //console.log(notes[4].noteId + " - " + notes[4].priority + " - " + notes[4].note);
+    for (let i=0; i<notes.length; i++) {
+        console.log (notes[i].noteId + " - " + notes[i].priority + " - " + notes[i].note);
+ }
 }
 
 sortNotes();
