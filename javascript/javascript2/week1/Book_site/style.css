@@ -1,0 +1,62 @@
+h1 {
+    font-family: 'Ubuntu', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(60, 124, 124);
+    letter-spacing: 7px;
+    text-shadow: 0px 10px 20px rgb(192, 185, 185);
+}
+
+body {
+    font-family: 'Lato', cursive;
+}
+
+ul {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+h4 {
+    font-size: 14px;
+    font-style: italic;
+    margin: 0px;
+}
+
+p {
+    font-size: 12px;
+    font-style: italic;
+    margin: 3px;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-align: left;
+    box-shadow: 0 7px 20px rgb(209, 209, 209);
+    border-radius: 10px;
+    margin: 10px;
+    width: 350px;
+    
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    display: flex;
+    align-self: flex-start;
+    max-width: 100px;
+    border-radius: 3px;
+    margin: 10px 30px;
+}
