@@ -51,10 +51,12 @@ input {
     width: 350px;
     height: 200px;
     margin: 15px 0px;
+    padding: 30px auto;
     font-weight: bold;
     text-align: center;
     font-size: 25px;
 }
+
 
 @media screen and (max-width: 800px) {
     h1 {
