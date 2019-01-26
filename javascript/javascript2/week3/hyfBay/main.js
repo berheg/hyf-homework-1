@@ -49,14 +49,17 @@ sendPricesToServer(itemsPrices,getPrice);
 
 const country = document.querySelector ('.country > select');
 
-const selectedCountry = country.addEventListener ('input', () => {
-    products.filter (product => {
-    let x = product.shipsTo.forEach (itemCountry => itemCountry);
-    return x == country.value;
-})});
+
+country.addEventListener ('input', () => {
+    let selectedCountry = country.value;
+    console.log(products.filter (product => 
+        product.shipsTo.includes (selectedCountry)
+    ));
+    
+});
 
 
-console.log(selectedCountry);
+
 
 
 
