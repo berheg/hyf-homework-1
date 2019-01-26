@@ -5,7 +5,7 @@ console.log(products);
 const productList = document.querySelector (".products > ul");
 
 //getting products as a list with buttons 'add to cart'
-products.forEach (product => {
+let makeList = (arr) => {arr.forEach (product => {
     const item = document.createElement('li');
 
     const itemName = document.createElement('div');
@@ -34,7 +34,8 @@ products.forEach (product => {
     item.appendChild(btnCart);
         
     productList.appendChild (item);
-})
+})};
+makeList (products);
 
 //Price analytics
 
@@ -52,10 +53,23 @@ const country = document.querySelector ('.country > select');
 
 country.addEventListener ('input', () => {
     let selectedCountry = country.value;
+    let selectedListByCountries = products.filter (product => 
+        product.shipsTo.includes (selectedCountry));
+    console.log(selectedListByCountries);
+    makeList (selectedListByCountries);
+});
+
+
+
+//Filter using search
+const search = document.querySelector ('.search > input');
+
+
+search.addEventListener ('input', () => {
+    let searchingWord = search.value;
+    console.log(searchingWord)
     console.log(products.filter (product => 
-        product.shipsTo.includes (selectedCountry)
-    ));
-    
+        product.name.includes (searchingWord)));
 });
 
 
