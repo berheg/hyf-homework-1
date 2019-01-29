@@ -5,36 +5,40 @@ console.log(products);
 const productList = document.querySelector (".products > ul");
 
 //getting products as a list with buttons 'add to cart'
-let makeList = (arr) => {arr.forEach (product => {
-    const item = document.createElement('li');
+let makeList = (arr) => {
+    productList.innerHTML = '';
 
-    const itemName = document.createElement('div');
-    itemName.setAttribute ('class', 'name');
-    itemName.innerHTML = product.name;
-    item.appendChild(itemName);
+    arr.forEach (product => {
+        const item = document.createElement('li');
 
-    const itemPrice = document.createElement('div');
-    itemPrice.setAttribute ('class', 'price');
-    itemPrice.innerHTML = product.price;
-    item.appendChild(itemPrice);
+        const itemName = document.createElement('div');
+        itemName.setAttribute ('class', 'name');
+        itemName.innerHTML = product.name;
+        item.appendChild(itemName);
 
-    const itemRating = document.createElement('div');
-    itemRating.setAttribute ('class', 'rating');
-    itemRating.innerHTML = product.rating;
-    item.appendChild(itemRating);
+        const itemPrice = document.createElement('div');
+        itemPrice.setAttribute ('class', 'price');
+        itemPrice.innerHTML = product.price;
+        item.appendChild(itemPrice);
 
-    const itemShipsTo = document.createElement('div');
-    itemShipsTo.setAttribute ('class', 'ships-to');
-    itemShipsTo.innerHTML = product.shipsTo;
-    item.appendChild(itemShipsTo);
+        const itemRating = document.createElement('div');
+        itemRating.setAttribute ('class', 'rating');
+        itemRating.innerHTML = product.rating;
+        item.appendChild(itemRating);
 
-    const btnCart = document.createElement('button');
-    btnCart.setAttribute ('data-id', product.id);
-    btnCart.innerHTML = 'Add to cart';
-    item.appendChild(btnCart);
-        
-    productList.appendChild (item);
-})};
+        const itemShipsTo = document.createElement('div');
+        itemShipsTo.setAttribute ('class', 'ships-to');
+        itemShipsTo.innerHTML = product.shipsTo;
+        item.appendChild(itemShipsTo);
+
+        const btnCart = document.createElement('button');
+        btnCart.setAttribute ('data-id', product.id);
+        btnCart.innerHTML = 'Add to cart';
+        item.appendChild(btnCart);
+            
+        productList.appendChild (item);
+    }
+)};
 makeList (products);
 
 //Price analytics
@@ -55,21 +59,21 @@ country.addEventListener ('input', () => {
     let selectedCountry = country.value;
     let selectedListByCountries = products.filter (product => 
         product.shipsTo.includes (selectedCountry));
-    console.log(selectedListByCountries);
+    
     makeList (selectedListByCountries);
 });
 
 
 
 //Filter using search
-const search = document.querySelector ('.search > input');
-
+ const search = document.querySelector ('.search > input');
 
 search.addEventListener ('input', () => {
     let searchingWord = search.value;
-    console.log(searchingWord)
-    console.log(products.filter (product => 
-        product.name.includes (searchingWord)));
+    
+    let filteredListBySearch = products.filter (product => 
+        product.name.toLowerCase().includes (searchingWord.toLowerCase()));
+    makeList (filteredListBySearch);
 });
 
 
