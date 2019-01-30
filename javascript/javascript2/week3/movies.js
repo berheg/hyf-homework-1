@@ -98,12 +98,27 @@ const moviesRatings = moviesHighRated.map (movies => movies.rating);
 //Can you make sure the search is case insensitive? 
 //Hint: use indexOf
 
-const searchWords = ["The", "dog", "who", "is", "not", "a", "man"];
-let totalMovies = 0;
+const keywords = ["The", "dog", "who", "is", "not", "a", "man"];
+let moviesWithKeyWords = moview.filter ((movie) => {
+    doesMovieContainKeyWord (movie.title)
+});
+console.log(moviesWithKeyWords.length);
 
-let movieNames = moview.map(movie => movie.title.split(" "));
+function doesMovieContainKeyWord (title) {
+    let titleContainsKeyword = false;
+    title.split(" ");
+    keywords.forEach ((keyword) => {
+        if (title.toLowerCase().includes(keyword.toLowerCase())) {
+            titleContainsKeyword = true;
+        };
+    })
+}
 
-// STUCK HERE :(
+
+
+//let movieNames = moview.map(movie => movie.title.split(" "));
+
+
 
 //console.log (totalMovies)
 
