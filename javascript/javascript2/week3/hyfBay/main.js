@@ -76,6 +76,42 @@ search.addEventListener ('input', () => {
     makeList (filteredListBySearch);
 });
 
+// sorting products (price - ascending/descending, name)
+const sorting = document.querySelector ('.sort > select');
+
+
+
+sorting.addEventListener ('change', () => {
+    let sortValue = sorting.value;
+
+    if (sortValue === 'cheap') {
+        let sortLowHigh = products.sort ((product1, product2) => product1.price-product2.price);
+        console.log(sortLowHigh);
+        makeList(sortLowHigh);
+    } else if (sortValue === 'expensive') {
+        let sortHighLow = products.sort ((product1, product2) => product2.price-product1.price);
+        console.log(sortHighLow);
+        makeList(sortHighLow);
+    } else {
+        let sortName = products.sort ((product1, product2) => {
+            let nameA = product1.name.toLowerCase ();
+            let nameB = product2.name.toLowerCase ();
+
+            if (nameA < nameB) {
+                return -1;
+            } else if (nameA > nameB) {
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+        console.log(sortName);
+        makeList(sortName);
+    }
+})
+
+   
+
 
 
 
