@@ -24,11 +24,14 @@ selectBtn.addEventListener ('click', () => {
         .then (response => response.json())
         .then ((weatherData) => {
             console.log(weatherData);
-            let selectedCity = weatherData.name; //getting city name
+
+            let selectedCity = weatherData.name + ', ' + weatherData.sys.country; //getting city name
             let cityTemp = Math.round (weatherData.main.temp) + '&deg;C' //getting temperature
             
             weatherImg.src = 'http://openweathermap.org/img/w/'+ weatherData.weather[0].icon +'.png'; //getting weather picture
-            answer.innerHTML = selectedCity + ' ' + cityTemp;
+            
+            
+            answer.innerHTML = selectedCity + " " + cityTemp;
             
         answerOutput (answer, weatherImg);
             
