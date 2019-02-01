@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Patrick",
+        "surname": "Johnson",
+        "id": 2300004567,
+        "phone": "31245678",
+        "city": "Copenhagen"
+    },
+    {
+        "name": "Eva",
+        "surname": "Rotach",
+        "id": 2300000001,
+        "phone": "36755555",
+        "city": "Copenhagen"
+    },
+    {
+        "name": "Ivan",
+        "surname": "Petrov",
+        "id": 2300002309,
+        "phone": "86543902",
+        "city": "Oslo"
+    },
+    {
+        "name": "Louis",
+        "surname": "Foreighn",
+        "id": 2300006723,
+        "phone": "37639678",
+        "city": "Malmo"
+    },
+    {
+        "name": "Lulu",
+        "surname": "Plain",
+        "id": 2300008884,
+        "phone": "38406456",
+        "city": "Helsingor"
+    }, 
+    {
+        "name": "David",
+        "surname": "Brugger",
+        "id": 2300006656,
+        "phone": "54327654",
+        "city": "Greve"
+    }
+]
