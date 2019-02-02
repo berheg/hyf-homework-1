@@ -27,7 +27,7 @@ let getWeather = (city) => {
 
                 if (weatherData.cod === '404' ) {
 
-                    answer.innerHTML = "Did you enter a city name correctly?";
+                    answer.innerHTML = "Oooops... Something went wrong! Did you enter a city name correctly? ";
                     document.body.querySelector ('.output').appendChild (answer);
 
                 } else {
