@@ -12,13 +12,24 @@
         <header>
             <img src='https://cdn0.iconfinder.com/data/icons/smiley-emoticons-handdrawn/153/38-512.png'>
             <h1>Curious about weather?</h1>
+            <h2>You have 2 options to find out: </h2>
         </header>
-        <main>
-            <h3> Enter a city name: </h3>
-            <input type="text" placeholder="Enter city">
-            <button>Check weather</button>
+
+        <section class="main">
+            <div class="weather-by-search">
+                <input type="text" placeholder="Enter city">
+                <button class="requestBtn">Check weather</button>
+            </div>
+            <div class="weather-by-location">
+                <input class="local-city">
+                <button class="locationBtn">Local weather</button>
+            </div>           
+        </section>   
+
+        <section>
             <div class="output"></div>
-        </main>     
+        </section>
+         
         <script src='main.js'></script>
     </body>
 </html>
