@@ -45,4 +45,25 @@ fetch ('https://gist.githubusercontent.com/pankaj28843/08f397fcea7c760a99206bcb0
 
 // ------------------------Exercise 3------------------------------------
 
+    
+const promise = new Promise ((resolve) => {
+    setTimeout (() => {
+        resolve();
+    }, 3000)
+})
+
+promise
+    .then (() => {
+        return fetch ('https://api.duckduckgo.com/?q=DuckDuckGo&format=json&pretty=1')
+    })
+    .then ((response) => response.json())
+    .then ((result) => {
+        console.log (result)
+    })
+
+    
+
+// ------------------------Exercise 4------------------------------------
+//Rewrite setTimeout and navigator.geolocation.getCurrentPosition to promises.
+
 
