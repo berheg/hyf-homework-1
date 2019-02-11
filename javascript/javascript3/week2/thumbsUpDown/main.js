@@ -6,44 +6,105 @@ function getRandomInt(min, max) {
 
 document.body.classList.add(`gradient-${getRandomInt(1,4)}`);
 
+const dishes = [
+    {
+        name: 'dish1',
+        picture: 'pictures/6A4A3509.jpg'
+    },
+    {
+        name: 'dish2',
+        picture: 'pictures/3757965.jpg'
+    },
+    {
+        name: 'dish3',
+        picture: 'pictures/black-forest-cake-6.jpg'
+    },
+    {
+        name: 'dish4',
+        picture: 'pictures/burger-chips.jpg'
+    },
+    {
+        name: 'dish5',
+        picture: 'pictures/fish.jpg'
+    },
+    {
+        name: 'dish6',
+        picture: 'pictures/21799-Fruit-Dish.jpg'
+    },
+    {
+        name: 'dish7',
+        picture: 'pictures/images.jpg'
+    }, 
+    {
+        name: 'dish8',
+        picture: 'pictures/meat.jpeg'
+    }, 
+    {
+        name: 'dish9',
+        picture: 'pictures/oats.jpg'
+    }, 
+    {
+        name: 'dish10',
+        picture: 'pictures/Types-of-sushi.jpg'
+    }
+]
+
 const rejectBtn = document.querySelector('.reject');
 const acceptBtn = document.querySelector('.accept');
 let liTickets = document.querySelectorAll('li');
 
-// function that moves ticket ot the right
-const acceptTicket = (ticket) => {
-    acceptBtn.addEventListener ('click', () => {
-        ticket.style.transform = 'translateX(1000px)';
+//adding some images
+for (let i=0; i<liTickets.length; i++) {
+    let img = document.createElement ('img');
+    img.src = dishes[i].picture;
+    img.style.width = '280px';
+    img.style.height = '180px';
+    liTickets[i].appendChild (img);
+}
+
+// Swiping li element to the side
+const animateLiOut = (index, swipeDirection) => {
+    if (swipeDirection === "right") {
+        liTickets[index].style.transform = 'translateX(1000px)';
+    } else {
+        liTickets[index].style.transform = 'translateX(-1000px)';
+    }
+    return new Promise ((resolve, reject) => {
+        setTimeout(() => {
+            resolve();
+        }, 700);
     })
 }
 
-// function that moves ticket ot the left
-const rejectTicket = (ticket) => {
-    rejectBtn.addEventListener('click', () => {
-        ticket.style.transform = 'translateX(-1000px)';
-    })
+//animation of the next li element
+const animateNextLiIn = (index) => {
+    liTickets[index].style.opacity = 1;
+    liTickets[index].style.transform = 'scale(1)'
 }
 
-// show next ticket
-const animateNextLiIntoView = (i) => {
-    liTickets[i].style.opacity = '1';
-    liTickets[i].style.transform = 'scale(1)';
-}
+let liIndexCounter = 0;
 
-const animateLiOut = () => {
-    return promise = new Promise ((resolve) => {
-        liTickets.forEach (ticket => {
-            acceptTicket(ticket) || rejectTicket (ticket);  
-         })
-        setTimeout (() => {
-            resolve ();
-        }, 2000);
-    })
-}
-
-animateLiOut()
-    .then (() => {
+// events when button is pressed
+acceptBtn.addEventListener ('click', () => {
+    animateLiOut (liIndexCounter, 'right')
+        .then (() => {
+            animateNextLiIn(liIndexCounter + 1);
+            liIndexCounter ++;
+        })
         
-        animateNextLiIntoView(1);    // in this way it returns ticket that was just moved and changes it's name :))))
-    })
+})
+
+rejectBtn.addEventListener ('click', () => {
+    animateLiOut (liIndexCounter, 'left')
+        .then (() => {
+            animateNextLiIn(liIndexCounter + 1);
+            liIndexCounter ++;
+    });
+
+})
+
+
+
+    
+
 
