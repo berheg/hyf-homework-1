@@ -35,8 +35,8 @@ const getRandomColor = () => {
 
 //drawing circles
 setInterval (() => {
-    x = Math.floor (Math.random() * 1500);
-    y = Math.floor (Math.random() * 840);
+    x = Math.floor (Math.random() * 2500);
+    y = Math.floor (Math.random() * 1240);
     r = Math.floor (Math.random() * 30);
     fillColor = getRandomColor ();
     let c = new Circle (x, y, r, 0, Math.floor(2*Math.PI), fillColor);
