@@ -1,14 +1,35 @@
+
+const renderList = (x, y) => {
+    const studentList = document.querySelector('.students-list');
+
+    const studentCard = document.createElement('li');
+    const studentName = document.createElement('h4');
+    const studentEmail = document.createElement('p');
+
+    studentName.innerHTML = x;
+    studentEmail.innerHTML = y;
+
+    studentCard.appendChild (studentName);
+    studentCard.appendChild (studentEmail);
+    studentList.appendChild (studentCard);
+}
+
+
 class StudentBook {
     constructor (...students) {
         this.students = students;        
     }
 
     getList () {
-        return this.students.map ((student) => {
-           const name = student.name;
-           const email = student.email;
-           return {name, email} ;
+        
+        this.students.map ((student) => {
+        //    const name = student.name;
+        //    const email = student.email;
+        //    return {name, email} ;
+        renderList (student.name, student.email);
         });
+
+
     }
 
     getListByClass (classSearch) {
@@ -208,7 +229,7 @@ Sample Result:
 
 /*****************************************************************
  Step 5: Write a method that can edit existing student information
-*************************************************************** */
+*****************************************************************/
 
 // Look at Sheila's classId has changed to '07'
 const studentInfo =  {
@@ -217,9 +238,9 @@ const studentInfo =  {
     'email': 'sheila@mail.com',
     'phone': '11110000'
 };
-hyf_students.editStudentInfo(studentInfo); // this method should modify student info
+// hyf_students.editStudentInfo(studentInfo); // this method should modify student info
 
-hyf_students.getStudentDetailByName('Sheila'); // to verify
+// hyf_students.getStudentDetailByName('Sheila'); // to verify
 /** 
 Sample Result:
  {
@@ -229,3 +250,10 @@ Sample Result:
        'phone': '3333333'
 }
 */
+
+/*****************************************************************
+ Step 6: 
+*****************************************************************/
+
+// _Additional challenge:_
+// Use HTML to display list and student details and input form to add new students.

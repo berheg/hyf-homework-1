@@ -2,9 +2,31 @@
 <html>
     <head>
         <title>HYF students</title>
-
+        <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
+        <h1>HYF students</h1>
+        <div class="students-list container">
+            <ul class="students-list"></ul>
+        </div>
+        <div class="input container">
+            <form action="input">
+                <label for="name"> Name:
+                    <input type="text" id="name" placeholder="name">
+                </label>
+                <label for="classId"> Class:
+                    <input type="text" id="classId" placeholder="class number">
+                </label>
+                <label for="email"> Email:
+                    <input type="email" id="email" placeholder="e-mail">
+                </label>
+                <label for="phone"> Phone number:
+                    <input type="number" id="phone" placeholder="phone number">
+                </label>
+
+            </form>
+        </div>
+
         <script src="students.js"></script>
     </body>
 </html>
