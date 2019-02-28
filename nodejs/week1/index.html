@@ -6,27 +6,55 @@
     </head>
     <body>
         <h1>HYF students</h1>
-        <div class="students-list container">
-            <ul class="students-list"></ul>
-        </div>
-        <div class="input container">
-            <form action="input">
-                <label for="name"> Name:
-                    <input type="text" id="name" placeholder="name">
-                </label>
-                <label for="classId"> Class:
-                    <input type="text" id="classId" placeholder="class number">
-                </label>
-                <label for="email"> Email:
-                    <input type="email" id="email" placeholder="e-mail">
-                </label>
-                <label for="phone"> Phone number:
-                    <input type="number" id="phone" placeholder="phone number">
-                </label>
+        <main>
+            <div class="left-side-container">
+                <div class="students-info container">
+                    <ol class="students-list"></ol>
+                </div>
+            </div>
 
-            </form>
-        </div>
+            <div class="right-side-container">
+                <div class="radio-choice container">
+                    <form action="input">
+                        <input type="radio" name="students-list-options" value="all-list" checked> Show all students<br>
+                        <input type="radio" name="students-list-options" value="class-list"> Show students of class
+                            <select>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                              </select> <br>
+                        <input type="radio" name="students-list-options" value="student-info"> Show info of a student
+                            <input type="text" placeholder="enter name of a student"> <br>
+                        <input type="radio" name="students-list-options" value="add-student"> Add a student <br>
+                        <input type="radio" name="students-list-options" value="change-student-info"> Change student's info
+                    </form>
+                </div>
 
+                <div class="input container">
+                    <form action="input">
+                        <label for="name"> Name:
+                            <input type="text" id="name" placeholder="name">
+                        </label>
+                        <label for="classId"> Class:
+                            <select>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                            </select>
+                        </label>
+                        <label for="email"> Email:
+                            <input type="email" id="email" placeholder="e-mail">
+                        </label>
+                        <label for="phone"> Phone number:
+                            <input type="number" id="phone" placeholder="phone number">
+                        </label>
+                        <button id="add-student">Add a student</button>
+                    </form>
+                </div>
+            </div>
+        </main>
         <script src="students.js"></script>
     </body>
 </html>
