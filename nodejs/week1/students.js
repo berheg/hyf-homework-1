@@ -42,7 +42,19 @@ class StudentBook {
   }
 
   addNewStudent (newStudent) {
-      this.students.unshift(newStudent); //'unshift' because in the sample new student is the first one
+    let isStudentNew = true;
+    this.students.forEach ((student) => {
+        if (newStudent.name.toLowerCase() === student.name.toLowerCase()) {
+            return isStudentNew = false;
+        } 
+    })
+
+    if (isStudentNew) {
+        this.students.unshift(newStudent); //'unshift' because in the sample new student is the first one
+    } else {
+        console.log('Student is already on the list');
+    }
+      
   }
 
   editStudentInfo (newInfo) {
@@ -50,17 +62,19 @@ class StudentBook {
       
       this.students.filter((student) => {
           if (student.name.toLowerCase().includes(selectedStudentName)) {
-              if (student.classId !== newInfo.classId) {
+            if (student.classId !== newInfo.classId) {
                 //   alert("Do you really want to change the class?");
                   student.classId = newInfo.classId;
-              } else if (student.email !== newInfo.email) {
+            }
+            if (student.email !== newInfo.email) {
                 //   alert("Do you really want to change Student's email?");
                   student.email = newInfo.email;
-              } else if (student.phone !== newInfo.phone) {
+            }
+            if (student.phone !== newInfo.phone) {
                 //   alert("Do you really want to change Student's phone number?");
                   student.phone = newInfo.phone;
-              }
-              return student;
+            }
+            return student;
           }
       })
       
