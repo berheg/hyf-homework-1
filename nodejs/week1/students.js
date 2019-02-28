@@ -1,88 +1,70 @@
 
-const renderList = (x, y) => {
-    const studentList = document.querySelector('.students-list');
-
-    const studentCard = document.createElement('li');
-    const studentName = document.createElement('h4');
-    const studentEmail = document.createElement('p');
-
-    studentName.innerHTML = x;
-    studentEmail.innerHTML = y;
-
-    studentCard.appendChild (studentName);
-    studentCard.appendChild (studentEmail);
-    studentList.appendChild (studentCard);
-}
-
-
+//defining class and its methods
 class StudentBook {
-    constructor (...students) {
-        this.students = students;        
-    }
+  constructor (...students) {
+      this.students = students;        
+  }
 
-    getList () {
-        
-        this.students.map ((student) => {
-        //    const name = student.name;
-        //    const email = student.email;
-        //    return {name, email} ;
-        renderList (student.name, student.email);
-        });
+  getList () {
+    return  this.students.map ((student) => {
+        const name = student.name;     
+        const email = student.email;   
+        return {name, email} ;         
+    });
+    
+  }
 
+  getListByClass (classSearch) {
+      const studentsOfClass = this.students.filter((student) => {
+          return student.classId === classSearch;
+      })
+      const getStudentInfo = studentsOfClass.map((student) => {
+          const name = student.name;
+          const classId = student.classId;
+          return {name, classId};
+      })
+      return getStudentInfo;
+  }
 
-    }
+  getStudentDetailByName (searchedName) {
+      let matchFound = false;
+      const findMatch = this.students.filter ((student) => {
+          if (student.name.toLowerCase().includes(searchedName.toLowerCase())) {
+              matchFound = true;
+              return student;
+          }
+      })
+      if (matchFound === true) {
+          return findMatch;
+      } else {
+          return "Match not found";
+      }
+  }
 
-    getListByClass (classSearch) {
-        const studentsOfClass = this.students.filter((student) => {
-            return student.classId === classSearch;
-        })
-        const getStudentInfo = studentsOfClass.map((student) => {
-            const name = student.name;
-            const classId = student.classId;
-            return {name, classId};
-        })
-        return getStudentInfo;
-    }
+  addNewStudent (newStudent) {
+      this.students.unshift(newStudent); //'unshift' because in the sample new student is the first one
+  }
 
-    getStudentDetailByName (searchedName) {
-        let matchFound = false;
-        const findMatch = this.students.filter ((student) => {
-            if (student.name.toLowerCase().includes(searchedName.toLowerCase())) {
-                matchFound = true;
-                return student;
-            }
-        })
-        if (matchFound === true) {
-            return findMatch;
-        } else {
-            return "Match not found";
-        }
-    }
-
-    addNewStudent (newStudent) {
-        this.students.unshift(newStudent); //'unshift' because in the sample new student is the first one
-    }
-
-    editStudentInfo (newInfo) {
-        const selectedStudentName = newInfo.name.toLowerCase();
-        
-        this.students.filter((student) => {
-            if (student.name.toLowerCase().includes(selectedStudentName)) {
-                if (student.classId !== newInfo.classId) {
-                    alert("Do you really want to change the class?");
-                    student.classId = newInfo.classId;
-                } else if (student.email !== newInfo.email) {
-                    alert("Do you really want to change Student's email?");
-                    student.email = newInfo.email;
-                } else if (student.phone !== newInfo.phone) {
-                    alert("Do you really want to change Student's phone number?");
-                    student.phone = newInfo.phone;
-                }
-                return student;
-            }
-        })
-        
-    }
+  editStudentInfo (newInfo) {
+      const selectedStudentName = newInfo.name.toLowerCase();
+      
+      this.students.filter((student) => {
+          if (student.name.toLowerCase().includes(selectedStudentName)) {
+              if (student.classId !== newInfo.classId) {
+                  alert("Do you really want to change the class?");
+                  student.classId = newInfo.classId;
+              } else if (student.email !== newInfo.email) {
+                  alert("Do you really want to change Student's email?");
+                  student.email = newInfo.email;
+              } else if (student.phone !== newInfo.phone) {
+                  alert("Do you really want to change Student's phone number?");
+                  student.phone = newInfo.phone;
+              }
+              return student;
+          }
+      })
+      
+  }
 }
 
 
@@ -103,16 +85,16 @@ const hyf_students = new StudentBook(
         {   "name": "Lou Wilkerson",   "classId": '06',   "email": "isade@wonsup.br",   "phone": "(503) 932-2128" },
         {   "name": "Bobby Weaver",   "classId": '06',   "email": "otulean@wole.su",   "phone": "(482) 478-5946" },
         {   "name": "Carlos Phelps",   "classId": '06',   "email": "de@mononpin.sj",   "phone": "(945) 779-2726" },
-        {   "name": "Alfred Washington",   "classId": '06',   "email": "kakdat@pih.gb",   "phone": "(746) 843-2346" },
-        {   "name": "Teresa Fitzgerald",   "classId": '06',   "email": "vopugaw@gasudnod.cr",   "phone": "(288) 240-2845" },
-        {   "name": "Wayne Long",   "classId": '06',   "email": "rasvalif@piuwezu.gi",   "phone": "(833) 911-1457" },
-        {   "name": "Luella Hammond",   "classId": '06',   "email": "nimhi@kagukvaj.bn",   "phone": "(455) 680-1114" }
+        {   "name": "Alfred Washington",   "classId": '09',   "email": "kakdat@pih.gb",   "phone": "(746) 843-2346" },
+        {   "name": "Teresa Fitzgerald",   "classId": '09',   "email": "vopugaw@gasudnod.cr",   "phone": "(288) 240-2845" },
+        {   "name": "Wayne Long",   "classId": '09',   "email": "rasvalif@piuwezu.gi",   "phone": "(833) 911-1457" },
+        {   "name": "Luella Hammond",   "classId": '09',   "email": "nimhi@kagukvaj.bn",   "phone": "(455) 680-1114" }
 );
 
 /***************************************************************
  Step 1: Write a method that can return list is all HYF students
 ****************************************************************/
-hyf_students.getList();
+console.log(hyf_students.getList());
 
 /** 
 Sample Result:
