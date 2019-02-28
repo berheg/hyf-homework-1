@@ -51,13 +51,13 @@ class StudentBook {
       this.students.filter((student) => {
           if (student.name.toLowerCase().includes(selectedStudentName)) {
               if (student.classId !== newInfo.classId) {
-                  alert("Do you really want to change the class?");
+                //   alert("Do you really want to change the class?");
                   student.classId = newInfo.classId;
               } else if (student.email !== newInfo.email) {
-                  alert("Do you really want to change Student's email?");
+                //   alert("Do you really want to change Student's email?");
                   student.email = newInfo.email;
               } else if (student.phone !== newInfo.phone) {
-                  alert("Do you really want to change Student's phone number?");
+                //   alert("Do you really want to change Student's phone number?");
                   student.phone = newInfo.phone;
               }
               return student;
@@ -94,22 +94,23 @@ const hyf_students = new StudentBook(
 /******************************************************
  1: a method that return list is all HYF students
 *******************************************************/
-
-hyf_students.getList();
+console.log('--------- 1. a method that returns all students----------')
+console.log(hyf_students.getList());
 
 /**********************************************************************
  2: a method that return a filtered list of students by class name
 ***********************************************************************/
-
-hyf_students.getListByClass('08');
+console.log('--------- 2. a method that returns students of the class----------')
+console.log(hyf_students.getListByClass('08'));
 
 /*************************************************************************
  3:  method that can return one student’s detailed information
 ************************************************************************ */
+console.log('--------- 3. a method that returns one student’s detailed information----------')
+console.log(hyf_students.getStudentDetailByName('Sheila'));
 
-hyf_students.getStudentDetailByName('Sheila');
-
-hyf_students.getStudentDetailByName('zzzzz'); // if the student name not exits in the list should reult the below message
+console.log("---------")
+console.log("if match not found the responce will be - " + hyf_students.getStudentDetailByName('zzzzz')); // if the student name not exits in the list should reult the below message
 
 /*****************************************************************************
  4: a method that can add a new student to HYF 
@@ -124,7 +125,8 @@ const newStudent1 =  {
 };
 hyf_students.addNewStudent(newStudent1); // this method should add the new student in the list if not exits
 
-hyf_students.getList(); // Verify the student added to the list
+console.log('--------- 4. a method that adds new student and checks ----------')
+console.log(hyf_students.getList()); // Verify the student added to the list
 
 /*****************************************************************
  Step 5: Write a method that can edit existing student information
@@ -140,5 +142,6 @@ const studentInfo =  {
 
  hyf_students.editStudentInfo(studentInfo); // this method modify student info
 
- hyf_students.getStudentDetailByName('Sheila'); // to verify
+console.log('--------- 5. a method that changed student’s information----------');
+console.log(hyf_students.getStudentDetailByName('Sheila')); // to verify
 
