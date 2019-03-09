@@ -79,28 +79,27 @@ class StudentBook {
   }
 
   editStudentInfo (newInfo) {
-      const selectedStudentName = newInfo.name.toLowerCase();
-      
-      this.studentList.filter((student) => {
-          if (student.name.toLowerCase().includes(selectedStudentName)) {
-            if (student.classId !== newInfo.classId && newInfo.classId !== '' && newInfo.classId !== undefined && newInfo.classId !== null) {
-                  student.classId = newInfo.classId;
-                  console.log ('Student\'s class changed');
-            }
-            if (student.email !== newInfo.email && newInfo.email !== '' && newInfo.email !== undefined && newInfo.email !== null) {
-                  student.email = newInfo.email;
-                  console.log ('Student\'s email changed');
-            }
-            if (student.phone !== newInfo.phone && newInfo.phone !== '' && newInfo.phone !== undefined && newInfo.phone !== null) {
-                  student.phone = newInfo.phone;
-                  console.log ('Student\'s phone changed');
-            }
-            return student; 
-          } else {
-            return "We couldn't find this student. Please check spelling of his name"
-          }
-        })
+    const selectedStudentName = newInfo.name.toLowerCase();
+    
+    let selectedStudent = this.studentList.filter((student) => {
+        if (student.name.toLowerCase().includes(selectedStudentName)) {
+            return student;
+        }
+    })
+    if (selectedStudent.classId !== newInfo.classId && newInfo.classId !== '' && newInfo.classId !== undefined && newInfo.classId !== null) {
+        selectedStudent[0].classId = newInfo.classId;
+            console.log ('Student\'s class changed');
     }
+    if (selectedStudent.email !== newInfo.email && newInfo.email !== '' && newInfo.email !== undefined && newInfo.email !== null) {
+        selectedStudent[0].email = newInfo.email;
+            console.log ('Student\'s email changed');
+    }
+    if (selectedStudent.phone !== newInfo.phone && newInfo.phone !== '' && newInfo.phone !== undefined && newInfo.phone !== null) {
+        selectedStudent[0].phone = newInfo.phone;
+            console.log ('Student\'s phone changed');
+    }
+    return selectedStudent; 
+    } 
 
 }
 
