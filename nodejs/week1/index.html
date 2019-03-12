@@ -8,36 +8,31 @@
         <h1>HYF students</h1>
         <main>
             <div class="left-side-container">
-                <div class="students-info container">
-                    <ol class="students-list"></ol>
-                </div>
-            </div>
-
-            <div class="right-side-container">
                 <div class="radio-choice container">
-                    <form action="input">
-                        <input type="radio" name="students-list-options" value="all-list" checked> Show all students<br>
-                        <input type="radio" name="students-list-options" value="class-list"> Show students of class
-                            <select>
+                    <form>
+                        <label><input id="all-list" type="radio" name="students-list-options" value="all-list"> Show all students</label> <br>
+                        <label><input id="class-list" type="radio" name="students-list-options" value="class-list"> Show students of class
+                            <select class="class-selector">
+                                <option value=""></option>
                                 <option value="06">06</option>
                                 <option value="07">07</option>
                                 <option value="08">08</option>
                                 <option value="09">09</option>
-                              </select> <br>
-                        <input type="radio" name="students-list-options" value="student-info"> Show info of a student
-                            <input type="text" placeholder="enter name of a student"> <br>
-                        <input type="radio" name="students-list-options" value="add-student"> Add a student <br>
-                        <input type="radio" name="students-list-options" value="change-student-info"> Change student's info
+                              </select></label> <br>
+                        <label><input id="student-info" type="radio" name="students-list-options" value="student-info"> Show info of a student
+                            <input id="student-name" type="text" placeholder="enter name"></label> <br>
+                        <label><input id="add-student" type="radio" name="students-list-options" value="add-student"> Add a student </label><br>
+                        <label><input id="change-student-info" type="radio" name="students-list-options" value="change-student-info"> Change student's info</label>
                     </form>
                 </div>
 
                 <div class="input container">
-                    <form action="input">
+                    <form>
                         <label for="name"> Name:
                             <input type="text" id="name" placeholder="name">
                         </label>
                         <label for="classId"> Class:
-                            <select>
+                            <select id='new-student-class'>
                                 <option value="06">06</option>
                                 <option value="07">07</option>
                                 <option value="08">08</option>
@@ -54,7 +49,14 @@
                     </form>
                 </div>
             </div>
+
+            <div class="right-side-container">
+                    <div class="students-info container">
+                        <p class="temporary-text">Choose an option to show information</p>
+                    </div>
+                </div>
+    
         </main>
-        <script src="students.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>

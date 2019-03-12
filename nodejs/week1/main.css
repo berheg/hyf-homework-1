@@ -1,3 +1,8 @@
+body {
+    max-width: 1160px;
+    margin: 2px auto;
+}
+
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -12,10 +17,10 @@ h1 {
 main {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
-.right-side-container {
+.left-side-container {
     display: flex;
     flex-direction: column;
 }
@@ -38,6 +43,11 @@ p {
     margin-left: 20px;
 }
 
+.temporary-text {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(158, 154, 154);
+}
 
 .container {
     border: 1px solid gray;
@@ -46,6 +56,7 @@ p {
 }
 
 .input.container {
+    opacity: 0.3;
     margin-top: 10px;
 }
 
@@ -73,4 +84,3 @@ button {
 button:hover {
     background-color: rgb(50, 158, 122);
 }
-
