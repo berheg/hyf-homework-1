@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HYF students</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <h1>HYF students</h1>
+        <main>
+            <div class="left-side-container">
+                <div class="radio-choice container">
+                    <form>
+                        <label><input id="all-list" type="radio" name="students-list-options" value="all-list"> Show all students</label> <br>
+                        <label><input id="class-list" type="radio" name="students-list-options" value="class-list"> Show students of class
+                            <select class="class-selector">
+                                <option value=""></option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                              </select></label> <br>
+                        <label><input id="student-info" type="radio" name="students-list-options" value="student-info"> Show info of a student
+                            <input id="student-name" type="text" placeholder="enter name"></label> <br>
+                        <label><input id="add-student" type="radio" name="students-list-options" value="add-student"> Add a student </label><br>
+                        <label><input id="change-student-info" type="radio" name="students-list-options" value="change-student-info"> Change student's info</label>
+                    </form>
+                </div>
+
+                <div class="input container">
+                    <form>
+                        <label for="name"> Name:
+                            <input type="text" id="name" placeholder="name">
+                        </label>
+                        <label for="classId"> Class:
+                            <select id='new-student-class'>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                            </select>
+                        </label>
+                        <label for="email"> Email:
+                            <input type="email" id="email" placeholder="e-mail">
+                        </label>
+                        <label for="phone"> Phone number:
+                            <input type="number" id="phone" placeholder="phone number">
+                        </label>
+                        <button id="add-student">Add a student</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="right-side-container">
+                    <div class="students-info container">
+                        <p class="temporary-text">Choose an option to show information</p>
+                    </div>
+                </div>
+    
+        </main>
+        <script src="main.js"></script>
+    </body>
+</html>
