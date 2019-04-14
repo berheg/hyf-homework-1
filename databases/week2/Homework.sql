@@ -12,9 +12,12 @@ ADD COLUMN `location` varchar(255) DEFAULT 'CPH' NOT NULL;
 
 -- modifying two entries (rows) in one of the tables
 UPDATE student
-SET email = 'gordon.fields@gmail.com',
-    phone = '911-911-911'
+SET email = 'gordon.fields@gmail.com'
 WHERE id = 7;
+
+UPDATE student
+SET email = 'gordon.fields@gmail.com'
+WHERE id = 8;
 
 -- delete two entries in one of the tables
 DELETE FROM student_course
